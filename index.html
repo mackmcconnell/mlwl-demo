@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />	
+	<title>MLWL | Admin</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- stylesheets -->
+	<link rel="stylesheet" type="text/css" href="css/compiled/theme.css" />
+	<link rel="stylesheet" type="text/css" href="css/vendor/animate.css" />
+	<link rel="stylesheet" type="text/css" href="css/vendor/brankic.css" />
+	<link rel="stylesheet" type="text/css" href="css/vendor/ionicons.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/vendor/font-awesome.min.css" />
+
+	<!-- javascript -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+	<script src="js/vendor/jquery.cookie.js"></script>
+	<script src="js/theme.js"></script>
+
+	<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body id="users">
+	<div id="wrapper">
+		<div id="sidebar-default" class="main-sidebar">
+			<div class="current-user">
+				<a href="index.html" class="name">
+					<img class="avatar" src="images/avatars/5.jpg" />
+					<span>
+						Mike Palazzi
+						<i class="fa fa-chevron-down"></i>
+					</span>
+				</a>
+				<ul class="menu">
+					<li>
+						<a href="account-profile.html">Account settings</a>
+					</li>
+					<li>
+						<a href="account-billing.html">Billing</a>
+					</li>
+					<li>
+						<a href="account-notifications.html">Notifications</a>
+					</li>
+					<li>
+						<a href="account-support.html">Help / Support</a>
+					</li>
+					<li>
+						<a href="signup.html">Sign out</a>
+					</li>
+				</ul>
+			</div>
+			<div class="menu-section">
+				<h3>Admin</h3>
+				<ul>
+					<li>
+						<a href="index.html" class='active'>
+							<i class="ion-android-earth"></i> 
+							<span>Dashboard</span>
+						</a>
+					</li>
+					<li>
+						<a href="account.html" data-toggle="sidebar">
+							<i class="ion-person"></i> <span>Partners</span>
+							<i class="fa fa-chevron-down"></i>
+						</a>
+						<ul class="submenu">
+							<li><a href="profile-tc.html">Taster's Club</a></li>
+							<li><a href="account-billing.html">For Whiskey Lovers</a></li>
+							<li><a href="account-notifications.html">Other Website</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="invoices.html">
+							<i class="ion-pricetags"></i> 
+							<span>Invoices</span>
+						</a>
+					</li>
+					<!-- <li>
+						<a href="users.html" data-toggle="sidebar">
+							<i class="ion-person-stalker"></i> <span>Lists & Tables</span>
+							<i class="fa fa-chevron-down"></i>
+						</a>
+						<ul class="submenu">
+							<li><a href="users.html" class="active">Customers list</a></li>
+							<li><a href="datatables.html">Orders (Datatables)</a></li>
+							<li><a href="search.html">Products (Filters)</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="users.html" data-toggle="sidebar">
+							<i class="ion-stats-bars"></i> <span>Reports</span>
+							<i class="fa fa-chevron-down"></i>
+						</a>
+						<ul class="submenu">
+							<li><a href="reports.html">Reports orders</a></li>
+							<li><a href="reports-alt.html">Report sales</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="users.html" data-toggle="sidebar">
+							<i class="ion-pricetags"></i> <span>Forms</span>
+							<i class="fa fa-chevron-down"></i>
+						</a>
+						<ul class="submenu">
+							<li><a href="form.html">New Customer (validation)</a></li>
+							<li><a href="form-product.html">New Product (add-ons)</a></li>
+							<li><a href="wizard.html">Wizard</a></li>
+						</ul>
+					</li> -->
+				</ul>
+			</div>
+			<!-- <div class="menu-section">
+				<h3>Application</h3>
+				<ul>
+					<li>
+						<a href="account.html" data-toggle="sidebar">
+							<i class="ion-earth"></i> <span>App Pages</span>
+							<i class="fa fa-chevron-down"></i>
+						</a>
+						<ul class="submenu">
+							<li><a href="sidebar.html">Inbox Messages</a></li>
+							<li><a href="user-profile.html">User profile</a></li>
+							<li><a href="latest-activity.html">Latest activity</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="steps.html">Steps to launch</a></li>
+							<li><a href="calendar.html">Calendar</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="account.html" data-toggle="sidebar">
+							<i class="ion-card"></i> <span>Pricing</span>
+							<i class="fa fa-chevron-down"></i>
+						</a>
+						<ul class="submenu">
+							<li><a href="pricing.html">Pricing (Plans)</a></li>
+							<li><a href="pricing-alt.html">Pricing charts</a></li>
+							<li><a href="billing-form.html">Billing form</a></li>
+							<li><a href="invoice.html">Invoice</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="account.html" data-toggle="sidebar">
+							<i class="ion-flash"></i> <span>Features</span>
+							<i class="fa fa-chevron-down"></i>
+						</a>
+						<ul class="submenu">
+							<li><a href="email-templates.html">Email templates</a></li>
+							<li><a href="gallery.html">Gallery</a></li>
+							<li><a href="ui.html">UI Extras</a></li>
+							<li><a href="docs.html">API Documentation</a></li>
+							<li><a href="signup.html">Sign up</a></li>
+							<li><a href="signin.html">Sign in</a></li>
+							<li><a href="status.html">App Status</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div> -->
+			<div class="menu-section">
+				<!-- <h3>Admin</h3>
+				<ul>
+					<li>
+						<a href="account.html" data-toggle="sidebar">
+							<i class="ion-person"></i> <span>My account</span>
+							<i class="fa fa-chevron-down"></i>
+						</a>
+						<ul class="submenu">
+							<li><a href="account-profile.html">Settings</a></li>
+							<li><a href="account-billing.html">Billing</a></li>
+							<li><a href="account-notifications.html">Notifications</a></li>
+							<li><a href="account-support.html">Support</a></li>
+						</ul>
+					</li> -->
+					<!-- <li>
+						<a href="#" data-toggle="sidebar">
+							<i class="ion-usb"></i> <span>Level Navigation</span>
+							<i class="fa fa-chevron-down"></i>
+						</a>
+						<ul class="submenu">
+							<li>
+								<a href="invoice.html" data-toggle="sidebar">
+									Submenu
+									<i class="fa fa-chevron-down"></i>
+								</a>
+								<ul class="submenu">
+									<li><a href="#">Last menu</a></li>
+									<li><a href="#">Last menu</a></li>
+								</ul>
+							</li>
+							<li><a href="invoice.html">Menu link</a></li>
+							<li><a href="#">Extra link</a></li>
+						</ul>
+					</li> -->
+				</ul>
+			</div>
+			<div class="bottom-menu hidden-sm">
+				<ul>
+					<li><a href="#"><i class="ion-help"></i></a></li>
+					<li>
+						<a href="#">
+							<i class="ion-archive"></i>
+							<span class="flag"></span>
+						</a>
+						<ul class="menu">
+							<li><a href="#">5 unread messages</a></li>
+							<li><a href="#">12 tasks completed</a></li>
+							<!-- <li><a href="#">3 features added</a></li> -->
+						</ul>
+					</li>
+					<li><a href="signup.html"><i class="ion-log-out"></i></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="content">
+			<div class="menubar fixed">
+				<div class="sidebar-toggler visible-xs">
+					<i class="ion-navicon"></i>
+				</div>
+				
+				<div class="page-title">
+					Shipments
+				</div>
+				<form class="search hidden-xs">
+					<i class="fa fa-search"></i>
+					<input type="text" name="q" placeholder="Search shipments..." />
+					<input type="submit" />
+				</form>
+				<a href="form.html" class="new-user btn btn-success pull-right">
+					<span>New Shipment</span>
+				</a>
+			</div>
+
+			<div class="content-wrapper">
+				<div class="row page-controls">
+					<div class="col-md-12 filters">
+						<label>Filter:</label>
+						<a href="#" class="active">All</a>
+						<a href="#">Submitted</a>
+						<a href="#">Pending</a>
+						<a href="#">Shipped</a>
+
+						<div class="show-options">
+							<!-- <div class="dropdown">
+							  	<a class="button" data-toggle="dropdown" href="#">
+							  		<span>
+							  			Sort by
+							  			<i class="fa fa-unsorted"></i>
+							  		</span>
+							  	</a>
+							  	<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+							    	<li><a href="#">Name</a></li>
+									<li><a href="#">Signed up</a></li>
+									<li><a href="#">Last seen</a></li>
+									<li><a href="#">Browser</a></li>
+									<li><a href="#">Country</a></li>
+							  	</ul>
+							</div> -->
+							<!-- <a href="#" data-grid=".users-list" class="grid-view active"><i class="fa fa-th-list"></i></a>
+							<a href="#" data-grid=".users-grid" class="grid-view"><i class="fa fa-th"></i></a> -->
+						</div>
+					</div>
+				</div>
+
+				<div class="row users-list">
+					<div class="col-md-12">
+						<div class="row headers">
+							<div class="col-sm-2 header hidden-xs">
+								<label><a href="#">Date</a></label>
+							</div>
+							<div class="col-sm-2 header hidden-xs">
+								<label><a href="#">ID</a></label>
+							</div>
+							<div class="col-sm-3 header hidden-xs">
+								<label><a href="#">Customer</a></label>
+							</div>
+							<div class="col-sm-2 header hidden-xs">
+								<label><a href="#">Status</a></label>
+							</div>
+							<div class="col-sm-2 header hidden-xs">
+								<label class="text-right"><a href="#"></a></label>
+							</div>
+						</div>
+						<div class="row user" onclick="window.location ='shipment_submitted.html'">
+							<div class="col-sm-2">
+								<a href="shipment_submitted.html" class="name">8/29/2014</a>
+							</div>
+							<div class="col-sm-2">
+								<div class="email">#097294</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="email">For Whiskey Lovers</div>
+							</div>
+							<div class="col-sm-2">
+								<span class="label label-danger">Submitted</span>
+							</div>
+							<div class="col-sm-3">
+							</div>
+							<div class="col-sm-2">
+								<a class="email delete pull-right">delete</a>
+							</div>
+						</div>
+						<div class="row user" onclick="window.location ='shipment_submitted.html'">
+							<div class="col-sm-2">
+								<a href="shipment_submitted.html" class="name">8/29/2014</a>
+							</div>
+							<div class="col-sm-2">
+								<div class="email">#097293</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="email">Taster's Club</div>
+							</div>
+							<div class="col-sm-2">
+								<span class="label label-danger">Submitted</span>
+							</div>
+							<div class="col-sm-3">
+							</div>
+							<div class="col-sm-2">
+								<div class="email delete pull-right">delete</div>
+							</div>
+						</div>
+						<div class="row user" onclick="window.location ='shipment_submitted.html'">
+							<div class="col-sm-2">
+								<a href="shipment_submitted.html" class="name">8/29/2014</a>
+							</div>
+							<div class="col-sm-2">
+								<div class="email">#097292</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="email">For Whiskey Lovers</div>
+							</div>
+							<div class="col-sm-2">
+								<span class="label label-danger">Submitted</span>
+							</div>
+							<div class="col-sm-3">
+							</div>
+							<div class="col-sm-2">
+								<div class="email delete pull-right">delete</div>
+							</div>
+						</div>
+						<div class="row user" onclick="window.location ='shipment_pending.html'">
+							<div class="col-sm-2">
+								<a href="shipment_submitted.html" class="name">8/29/2014</a>
+							</div>
+							<div class="col-sm-2">
+								<div class="email">#097291</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="email">For Whiskey Lovers</div>
+							</div>
+							<div class="col-sm-2">
+								<span class="label label-warning">pending</span>
+							</div>
+							<div class="col-sm-3">
+							</div>
+							<div class="col-sm-2">
+								<div class="email delete pull-right">delete</div>
+							</div>
+						</div>
+						<div class="row user" onclick="window.location ='shipment_pending.html'">
+							<div class="col-sm-2">
+								<a href="shipment_submitted.html" class="name">8/29/2014</a>
+							</div>
+							<div class="col-sm-2">
+								<div class="email">#097290</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="email">Taster's Club</div>
+							</div>
+							<div class="col-sm-2">
+								<span class="label label-warning">pending</span>
+							</div>
+							<div class="col-sm-3">
+							</div>
+							<div class="col-sm-2">
+								<div class="email delete pull-right">delete</div>
+							</div>
+						</div>
+						<div class="row user" onclick="window.location ='shipment_pending.html'">
+							<div class="col-sm-2">
+							    <a href="shipment_submitted.html" class="name">8/21/2014</a>
+							</div>
+							<div class="col-sm-2">
+								<div class="email">#097289</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="email">Taster's Club</div>
+							</div>
+							<div class="col-sm-2">
+								<span class="label label-warning">pending</span>
+							</div>
+							<div class="col-sm-3">
+							</div>
+							<div class="col-sm-2">
+								<div class="email delete pull-right">delete</div>
+							</div>
+						</div>
+						<div class="row user" onclick="window.location ='shipment_pending.html'">
+							<div class="col-sm-2">
+								<a href="shipment_submitted.html" class="name">8/20/2014</a>
+							</div>
+							<div class="col-sm-2">
+								<div class="email">#097288</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="email">Other Website</div>
+							</div>
+							<div class="col-sm-2">
+								<span class="label label-warning">pending</span>
+							</div>
+							<div class="col-sm-3">
+							</div>
+							<div class="col-sm-2">
+								<div class="email delete pull-right">delete</div>
+							</div>
+						</div>
+						<div class="row user" onclick="window.location ='shipment_shipped.html'">
+							<div class="col-sm-2">
+								<a href="shipment_submitted.html" class="name">8/19/2014</a>
+							</div>
+							<div class="col-sm-2">
+								<div class="email">#097287</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="email">Other Website</div>
+							</div>
+							<div class="col-sm-2">
+								<span class="label label-success">shipped</span>
+							</div>
+							<div class="col-sm-3">
+							</div>
+							<div class="col-sm-2">
+								<div class="email delete pull-right">delete</div>
+							</div>
+						</div>
+						<div class="row user" onclick="window.location ='shipment_shipped.html'">
+							<div class="col-sm-2">
+								<a href="shipment_submitted.html" class="name">8/10/2014</a>
+							</div>
+							<div class="col-sm-2">
+								<div class="email">#097286</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="email">Other Website</div>
+							</div>
+							<div class="col-sm-2">
+								<span class="label label-success">shipped</span>
+							</div>
+							<div class="col-sm-3">
+							</div>
+							<div class="col-sm-2">
+								<div class="email delete pull-right">delete</div>
+							</div>
+						</div>
+						<div class="row user" onclick="window.location ='shipment_shipped.html'">
+							<div class="col-sm-2">
+								<a href="shipment_submitted.html" class="name">8/9/2014</a>
+							</div>
+							<div class="col-sm-2">
+								<div class="email">#097285</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="email">Other Website</div>
+							</div>
+							<div class="col-sm-2">
+								<span class="label label-success">shipped</span>
+							</div>
+							<div class="col-sm-3">
+							</div>
+							<div class="col-sm-2">
+								<div class="email delete pull-right">delete</div>
+							</div>
+						</div>
+						<div class="row user" onclick="window.location ='shipment_shipped.html'">
+							<div class="col-sm-2">
+								<a href="shipment_submitted.html" class="name">8/7/2014</a>
+							</div>
+							<div class="col-sm-2">
+								<div class="email">#097284</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="email">Other Website</div>
+							</div>
+							<div class="col-sm-2">
+								<span class="label label-success">shipped</span>
+							</div>
+							<div class="col-sm-3">
+							</div>
+							<div class="col-sm-2">
+								<div class="email delete pull-right">delete</div>
+							</div>
+						</div>
+						<div class="row pager-wrapper">
+							<div class="col-sm-12">
+								<ul class="pager">
+								  	<li><a href="#">Previous</a></li>
+								  	<li><a href="#">Next</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
